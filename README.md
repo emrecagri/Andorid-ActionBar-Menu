@@ -298,8 +298,9 @@ Artık ikonumuz res > drawable klasörünün içerisine eklendi ve Android Studi
 
 ```java
 android:icon="@drawable/search"
-kodu otomatik olarak eklenerek ikonumuz ögemizin yerinde gösterildi.
 ```
+
+kodu otomatik olarak eklenerek ikonumuz ögemizin yerinde gösterildi.
 
 Uygulamamızı sanal cihazda çalıştırdığımızda cihazımızın ekran boyutu küçük olduğu için ve uygulamanın adı da çok uzun olduğu için ikonumuz gözükür ama uygulama adımızın bir kısmı ActionBar M… şeklinde gözükür bu yüzden uygulamamızın adından Menu Example yazısını silerek kısaltalım. Uygulamanın adını değiştirmek için solda bulunan dosya gezgininden res > values klasörünün içinde bulunan strings.xml dosyasına çift tıklayarak açalım ve içindeki uygulama adımızı değiştirelim.
 
