@@ -4,8 +4,8 @@
 
 ---
 
-Android ActionBar Menü Oluşturma ve Öge Ekleme
-10 Aralık 2020 Yazarı: emrecagri
+# Android ActionBar Menü Oluşturma ve Öge Ekleme
+
 Bu yazımda Android ActionBar’da menü oluşturmayı, bu menüye nasıl öge eklemeyip düzenleyeceğimizi ve bu ögeye dışarıdan ikon alıp tanımlamayı anlatacağım.
 
 Projenin kaynak kodlarını Github hesabımda bulabilirsiniz.
