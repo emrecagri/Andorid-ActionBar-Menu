@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ActionBar Menu</string>
+    <string name="menu_ara">Ara</string>
+    <string name="menu_begen">Beğen</string>
+    <string name="menu_paylas">Paylaş</string>
+    <string name="menu_hakkinda">Hakkında</string>
+    <string name="menu_cikis">Çıkış</string>
+    <string name="aciklama">Android ActionBar Menu Example</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ara"
+        app:showAsAction="always"
+        android:icon="@drawable/search"
+        android:orderInCategory="0"
+        android:title="@string/menu_ara" />
+
+    <item
+        android:id="@+id/begen"
+        android:icon="@drawable/like"
+        android:orderInCategory="1"
+        android:title="@string/menu_begen"
+        app:showAsAction="always" />
+
+    <item
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:id="@+id/paylas"
+        android:title="@string/menu_paylas"/>
+
+    <item
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:id="@+id/hakkinda"
+        android:title="@string/menu_hakkinda"/>
+
+    <item
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        android:id="@+id/cikis"
+        android:title="@string/menu_cikis"/>
+
+</menu>
