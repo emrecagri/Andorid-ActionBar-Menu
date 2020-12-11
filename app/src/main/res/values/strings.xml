@@ -5,5 +5,5 @@
     <string name="menu_paylas">Paylaş</string>
     <string name="menu_hakkinda">Hakkında</string>
     <string name="menu_cikis">Çıkış</string>
-    <string name="aciklama">Android ActionBar Menu Example</string>
+    <string name="aciklama">Paylaş, Hakkında ve Çıkış Butonları Çalışan Android ActionBar Menü Örneği</string>
 </resources>

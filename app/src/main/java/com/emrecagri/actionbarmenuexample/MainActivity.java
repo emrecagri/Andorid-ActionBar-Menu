@@ -1,8 +1,11 @@
 package com.emrecagri.actionbarmenuexample;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,13 +36,52 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Beğenme seçeneğine bastınız.", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.paylas:
-                Toast.makeText(this, "Paylaşma seçeneğine bastınız.", Toast.LENGTH_SHORT).show();
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(android.content.Intent.EXTRA_TEXT,
+                        "Bu çok satırlı yazı \n" +
+                                "paylaşma kodudur. \n");
+                sendIntent.setType("text/plain");
+                startActivity(Intent.createChooser(sendIntent, "Paylaş"));
+
                 break;
             case R.id.hakkinda:
-                Toast.makeText(this, "Hakkında seçeneğine bastınız.", Toast.LENGTH_SHORT).show();
+
+                final AlertDialog.Builder hakkindapenceresi = new AlertDialog.Builder( MainActivity.this ); //hakkindapenceresi adında AlertDialog tanımladık
+                hakkindapenceresi.setTitle("Hakkında"); //AlertDialog penceresi başlığı
+                hakkindapenceresi.setMessage( "Bu uygulama \ngithub.com/emrecagri \ntarafından hazırlanmıştır." );         //AlertDialog penceresi açıklaması
+                hakkindapenceresi.setCancelable( true ); //true ile bu AlertDialog penceresinden seçeneklere basılmadan çıkış yapılabileceğini belirttik
+                hakkindapenceresi.setPositiveButton( "Geri", new DialogInterface.OnClickListener() { //AlertDialog Pozitif Geri seçeneği
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel(); // Geri seçeneği seçildiğinde bu kod çalışıp AlertDialog penceresini kapatacak
+                    }
+                });
+                AlertDialog hakkindapenceresiAlertDialogu = hakkindapenceresi.create();
+                hakkindapenceresiAlertDialogu.show(); // AlertDialog penceresini gösteren kod
+
                 break;
             case R.id.cikis:
-                Toast.makeText(this, "Çıkış seçeneğine bastınız.", Toast.LENGTH_SHORT).show();
+
+                final AlertDialog.Builder cikispenceresi = new AlertDialog.Builder( MainActivity.this ); //cikispenceresi adında AlertDialog tanımladık
+                cikispenceresi.setMessage( "Uygulamadan çıkmak istediğinize emin misiniz?" );         //AlertDialog penceresi açıklaması
+                cikispenceresi.setCancelable( true );  //true ile bu AlertDialog penceresinden seçeneklere basılmadan çıkış yapılabileceğini belirttik
+                cikispenceresi.setNegativeButton( "Hayır",new DialogInterface.OnClickListener() { //AlertDialog Negatif Hayır seçeneği
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel(); // Hayır seçeneği seçildiğinde bu kod çalışıp AlertDialog penceresini kapatacak
+                    }
+                });
+                cikispenceresi.setPositiveButton( "Evet", new DialogInterface.OnClickListener() { //AlertDialog Pozitif Evet seçeneği
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();   // Evet seçeneği seçildiğinde bu kod çalışıp uygulamayı kapatacak
+                    }
+                });
+                AlertDialog cikispenceresiAlertDialogu = cikispenceresi.create();
+                cikispenceresiAlertDialogu.show(); // AlertDialog penceresini gösteren kod
+
                 break;
         }
         return super.onOptionsItemSelected(item);
